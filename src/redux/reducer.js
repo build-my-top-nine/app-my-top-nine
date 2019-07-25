@@ -1,3 +1,5 @@
+import {SEND_DETAILS} from './actions'
+
 const initialState = {
     userId: null,
     isLoggingIn: false,
@@ -7,7 +9,13 @@ const initialState = {
 }
 
 export default function (state = initialState, action) {
-    switch(action.type)
+    switch(action.type){
+        case SEND_DETAILS:
+
+
+        default:
+            return state
+    }
 
     return state
 }

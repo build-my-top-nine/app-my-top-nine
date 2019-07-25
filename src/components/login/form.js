@@ -1,19 +1,21 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {sendDetails} from '../../redux/actions'
+
 
 class LoginForm extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            username: "",
-            email: "",
-            password: "",
+            email: "test@test.com",
+            password: "test",
         }
     }
 
 
     submitForm = (e) => {
         e.preventDefault();
-        console.log(this.state)
+        this.props.sendDetails(this.state)
     }
 
     handleChange = (e) => {
@@ -30,7 +32,6 @@ class LoginForm extends React.Component {
     render() {
        return  <form onSubmit={this.submitForm}>
            Please log in.
-          {this.formItem('username')}
           {this.formItem('email')}
           {this.formItem('password', 'password')}
           <button type="sumbit">Go!</button>
@@ -38,4 +39,8 @@ class LoginForm extends React.Component {
     }
 }
 
-export default LoginForm
+const mapDispatchToProps = {
+    sendDetails
+}
+
+export default connect(null, mapDispatchToProps)(LoginForm)
