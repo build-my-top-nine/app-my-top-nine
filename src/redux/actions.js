@@ -7,7 +7,7 @@ export const sendDetails = creds => dispatch => {
     console.log(creds)
     return axios
         //.post('http://localhost:5000/auth/register', {name: 'test1', email: "test@test.com", password: "test"})
-        .post('http://localhost:5000/auth/login', {email: "test@test.com", password: "test"})
+        .post('http://localhost:5000/auth/register', {email: "test@test.com", password: "test", name: "test"})
         .then(res => {
             console.log(res)
         })

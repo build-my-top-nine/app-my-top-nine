@@ -1,11 +1,18 @@
 import React from 'react';
-import LoginForm from './components/login/form'
+
+import Header from './components/page/header'
+import Body from './components/page/body'
+import Footer from './components/page/footer'
+
 
 function App() {
   return (
     <div>
-      Heyo it's making a top nine!
-      <LoginForm />
+      <Header />
+      <div style={{width:"900px", margin:"auto"}}>
+        <Body />
+      </div>
+      <Footer />
     </div>
   );
 }
