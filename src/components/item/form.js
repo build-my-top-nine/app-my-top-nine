@@ -4,8 +4,12 @@ import React from 'react'
 class ListForm extends React.Component{
   constructor(props){
     super(props);
+
+    const id = this.props.allProps.items.filter
+
     this.state = {
       form: {
+        id:
         name: "",
         image: "",
         description: ""

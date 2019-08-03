@@ -24,9 +24,9 @@ class ItemCard extends React.Component{
       <span style={{padding:"5px"}} ><p>{item.description}</p></span>
 
       {this.props.allProps.userList.filter(userItem => userItem.id === item.id)[0] ? <span onClick={this.deleteItemFromUserList}>
-        "Delete from My List"
+        (Delete [-])
       </span>:<span onClick={this.addItemToUserList}>
-        "Add to My List"
+        (Add [+])
       </span>}
 
     </div>
